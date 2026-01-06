@@ -1,10 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const featuredImage = new URL(
-  "../DS%20Krishna/Stock%20Images/building-4884852.jpg",
-  import.meta.url
-).href;
+const featuredImage = "/assets/Stock Images/building-4884852.jpg";
 
 const FeaturedProject: React.FC = () => {
   return (

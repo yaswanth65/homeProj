@@ -9,10 +9,7 @@ const steps: ProcessStep[] = [
     title: "Initial Consultation",
     description:
       "We begin by understanding your vision, goals, and the lifestyle you want the space to reflect.",
-    imageUrl: new URL(
-      "../DS%20Krishna/How%20we%20Work/Board%20Meeting.avif",
-      import.meta.url
-    ).href,
+    imageUrl: "/assets/How we Work/Board Meeting.avif",
   },
   {
     id: "02",
@@ -20,10 +17,7 @@ const steps: ProcessStep[] = [
     title: "Concept Development",
     description:
       "Ideas take form through sketches, spatial planning, and early design explorations.",
-    imageUrl: new URL(
-      "../DS%20Krishna/How%20we%20Work/Architecture%20Sketches.avif",
-      import.meta.url
-    ).href,
+    imageUrl: "/assets/How we Work/Architecture Sketches.avif",
   },
   {
     id: "03",
@@ -31,10 +25,7 @@ const steps: ProcessStep[] = [
     title: "Planning & Preparation",
     description:
       "From materials and drawings to timelines and budgets, every detail is carefully defined.",
-    imageUrl: new URL(
-      "../DS%20Krishna/How%20we%20Work/Architectures.avif",
-      import.meta.url
-    ).href,
+    imageUrl: "/assets/How we Work/Architectures.avif",
   },
   {
     id: "04",
@@ -42,10 +33,7 @@ const steps: ProcessStep[] = [
     title: "Execution & Delivery",
     description:
       "We bring the vision to life with precision, quality craftsmanship, and attention to detail.",
-    imageUrl: new URL(
-      "../DS%20Krishna/How%20we%20Work/Modern%20Architecture.avif",
-      import.meta.url
-    ).href,
+    imageUrl: "/assets/How we Work/Modern Architecture.avif",
   },
 ];
 

@@ -1,10 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const gridImage = new URL(
-  "../DS%20Krishna/Stock%20Images/building-6577149.jpg",
-  import.meta.url
-).href;
+const gridImage = "/assets/Stock Images/building-6577149.jpg";
 
 const ImageGrid: React.FC = () => {
   return (

@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AccordionItem } from "../types";
 
-const differentiationImage = new URL(
-  "../DS%20Krishna/Stock%20Images/office-building-1026495.jpg",
-  import.meta.url
-).href;
+const differentiationImage = "/assets/Stock Images/office-building-1026495.jpg";
 
 const items: AccordionItem[] = [
   {
