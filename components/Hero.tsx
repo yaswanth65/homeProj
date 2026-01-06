@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         <video
           className="w-full h-full object-cover"
           src={heroVideo}
-          poster={heroSky}
+          
           autoPlay
           muted
           loop
