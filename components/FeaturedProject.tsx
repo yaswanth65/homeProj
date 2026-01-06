@@ -1,9 +1,89 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const featuredImage = "/assets/Stock Images/building-4884852.jpg";
+const projects = [
+  {
+    id: 1,
+    image: "/assets/Stock Images/building-4884852.jpg",
+    title: "The Celestia Residences",
+    category: "Residential",
+    date: "Nov 2020",
+  },
+  {
+    id: 2,
+    image: "/assets/How we Work/Modern Architecture.avif",
+    title: "Modern Architects Hub",
+    category: "Commercial",
+    date: "Mar 2021",
+  },
+  {
+    id: 3,
+    image: "/assets/How we Work/Architectures.avif",
+    title: "Design Innovation Center",
+    category: "Mixed Use",
+    date: "Jul 2021",
+  },
+  {
+    id: 4,
+    image: "/assets/How we Work/Board Meeting.avif",
+    title: "Executive Quarters",
+    category: "Residential",
+    date: "Dec 2021",
+  },
+];
 
 const FeaturedProject: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true);
+  const [direction, setDirection] = useState(0);
+
+  // Infinite autoplay loop
+  useEffect(() => {
+    if (!isAutoplay) return;
+
+    const interval = setInterval(() => {
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % projects.length);
+    }, 6000); // Increased interval for slower pace
+
+    return () => clearInterval(interval);
+  }, [isAutoplay]);
+
+  const goToPrev = () => {
+    setDirection(-1);
+    setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
+    setIsAutoplay(false);
+  };
+
+  const goToNext = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % projects.length);
+    setIsAutoplay(false);
+  };
+
+  // Slow, smooth slide variants
+  const slideVariants = {
+    enter: (dir: number) => ({
+      x: dir > 0 ? "100%" : "-100%",
+      opacity: 0,
+      scale: 1.1,
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+      scale: 1,
+    },
+    exit: (dir: number) => ({
+      zIndex: 0,
+      x: dir < 0 ? "100%" : "-100%",
+      opacity: 0,
+      scale: 0.95,
+    }),
+  };
+
+  const currentProject = projects[currentIndex];
+
   return (
     <section id="featured" className="py-12 bg-white">
       <div className="max-w-[90%] mx-auto mb-12">
@@ -26,27 +106,62 @@ const FeaturedProject: React.FC = () => {
         </motion.div>
       </div>
 
-      <div className="w-full relative overflow-hidden">
-        <motion.img
-          initial={{ opacity: 0, scale: 1.05 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-10%" }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          src={featuredImage}
-          alt="The Celestia Residences"
-          className="w-full h-[60vh] md:h-[85vh] object-cover"
-        />
+      <div className="w-full relative overflow-hidden p-[5vh]">
+        <div className="relative h-[90vh] overflow-hidden rounded-lg">
+          <AnimatePresence initial={false} custom={direction} mode="wait">
+            <motion.img
+              key={currentIndex}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: {
+                  type: "tween",
+                  ease: [0.25, 0.1, 0.25, 1], // Cubic bezier for smooth easing
+                  duration: 1.2,
+                },
+                opacity: { duration: 1.0 },
+                scale: { duration: 1.2, ease: "easeInOut" },
+              }}
+              src={currentProject.image}
+              alt={currentProject.title}
+              className="absolute w-full h-full object-cover"
+              onMouseEnter={() => setIsAutoplay(false)}
+              onMouseLeave={() => setIsAutoplay(true)}
+            />
+          </AnimatePresence>
+        </div>
+
         <div className="max-w-[90%] mx-auto mt-6 flex justify-between items-start border-b border-gray-200 pb-8">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-normal text-primary">
-              The Celestia Residences
-            </h3>
-            <p className="text-sm text-secondary font-light mt-1 uppercase tracking-wide">
-              Residential / Nov 2020
-            </p>
-          </div>
-          <div className="hidden md:flex gap-3">
-            <button className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-colors group">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`text-${currentIndex}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h3 className="text-2xl md:text-3xl font-normal text-primary">
+                {currentProject.title}
+              </h3>
+              <p className="text-sm text-secondary font-light mt-1 uppercase tracking-wide">
+                {currentProject.category} / {currentProject.date}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="hidden md:flex gap-3 items-center">
+            <div className="text-xs text-gray-400 font-medium mr-4">
+              {String(currentIndex + 1).padStart(2, "0")} /{" "}
+              {String(projects.length).padStart(2, "0")}
+            </div>
+            <button
+              onClick={goToPrev}
+              className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-colors group"
+              aria-label="Previous project"
+            >
               <svg
                 width="24"
                 height="24"
@@ -59,7 +174,11 @@ const FeaturedProject: React.FC = () => {
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </button>
-            <button className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-colors group">
+            <button
+              onClick={goToNext}
+              className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-colors group"
+              aria-label="Next project"
+            >
               <svg
                 width="24"
                 height="24"
