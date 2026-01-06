@@ -1,9 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const heroSky = "/assets/Hero Section/Image.png";
-const heroBuilding = "/assets/Hero Section/Image.png";
-const heroVideo = "/assets/Hero Section/Background Video.mp4";
+const heroSky = new URL("../assets/Hero%20Section/Image.png", import.meta.url)
+  .href;
+const heroBuilding = new URL(
+  "../assets/Hero%20Section/Image.png",
+  import.meta.url
+).href;
+const heroVideo = new URL(
+  "../assets/Hero%20Section/Background%20Video.mp4",
+  import.meta.url
+).href;
 
 const Hero: React.FC = () => {
   return (
