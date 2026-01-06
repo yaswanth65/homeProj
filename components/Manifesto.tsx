@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const manifestoImage1 = "/assets/Stock Images/building-6011756.jpg";
-const manifestoImage2 = "/assets/Stock Images/interior-design-3564955.jpg";
+const manifestoBackground = "/assets/Stock Images/building-6011756.jpg";
+const manifestoInset = "/assets/Stock Images/interior-design-3564955.jpg";
 
 const Manifesto: React.FC = () => {
   return (
