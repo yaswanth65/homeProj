@@ -2,53 +2,78 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
+  const rotating = "/assets/Stock Images/rotating-image.png"
   return (
+    // Outer container - Ensures full viewport height and centers content
     <footer className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#e0e0e0]">
-        {/* Background - Concrete Angles */}
+        
+        {/* --- Background Image --- */}
         <div className="absolute inset-0 z-0">
            <img 
+             // You can swap this background image URL as needed
              src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2600&auto=format&fit=crop" 
-             alt="Concrete Architecture" 
+             alt="Architecture Background" 
+             // object-cover ensures it fills the space, making it feel "big"
              className="w-full h-full object-cover grayscale brightness-110 contrast-125"
            />
-           {/* <div className="absolute inset-0 bg-gray-200/20 mix-blend-multiply"></div> */}
         </div>
         
-        <div className="relative z-10 w-full px-6">
+        {/* --- Central Card Container --- */}
+        <div className="relative z-10 w-full px-6 flex justify-center items-center my-12">
            <motion.div 
-             initial={{ opacity: 0, y: 50 }}
+             initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             transition={{ duration: 1, ease: "easeOut" }}
-             className="bg-white max-w-[600px] mx-auto aspect-square flex flex-col items-center justify-center text-center p-12 md:p-20 shadow-2xl relative"
+             transition={{ duration: 0.8, ease: "easeOut" }}
+             // The card itself - centered, fixed aspect ratio, white background
+             className="bg-white w-full max-w-[600px] aspect-square flex flex-col items-center justify-between text-center p-10 md:p-16 shadow-2xl"
            >
-              {/* Custom Clover Icon */}
-              <div className="mb-12 text-primary">
-                 <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
-                    <circle cx="30" cy="18" r="9" />
-                    <circle cx="30" cy="42" r="9" />
-                    <circle cx="18" cy="30" r="9" />
-                    <circle cx="42" cy="30" r="9" />
-                 </svg>
+              {/* 1. Top Text Section */}
+              <div className="flex-1 flex items-end pb-4">
+                <h2 className="text-xl md:text-2xl font-light text-black leading-tight mx-auto">
+                  We are always eager to explore new projects and collaboration opportunities. Feel free to reach out, and let's bring visionary designs to life together.
+                </h2>
               </div>
 
-              <h2 className="text-xl md:text-2xl font-light text-primary leading-relaxed mb-12 max-w-sm">
-                We always eager to explore new projects and collaboration opportunities. Feel free to reach out, and let's bring visionary designs to life together.
-              </h2>
+              {/* 2. Middle Spinning Image Placeholder */}
+              <div className="flex-1 flex items-center justify-center py-6">
+                 <motion.div 
+                    animate={{ rotate: 360 }}
+                    transition={{ 
+                      repeat: Infinity, 
+                      duration: 12, // Adjust rotation speed here (higher number = slower)
+                      ease: "linear" 
+                    }}
+                    // Set the size of your icon container here (e.g., w-24 h-24)
+                    className="w-28 h-28 relative flex items-center justify-center"
+                 >
+                    {/* ----------- IMAGE PLACEHOLDER ----------- 
+                       Replace the 'src' below with your actual image path.
+                       e.g., src="/assets/images/my-icon.png"
+                    */}
+                    <img 
+                        src={rotating} 
+                        alt="Spinning Icon"
+                        // object-contain ensures your image doesn't get cropped
+                        className="w-full h-full object-contain"
+                    />
+                 </motion.div>
+              </div>
               
-              <div className="flex flex-col gap-3">
-                 <p className="text-[10px] uppercase tracking-[0.2em] text-secondary font-semibold">Get in Touch</p>
-                 <a href="mailto:luxehaven@gmail.com" className="text-lg font-medium text-primary hover:text-secondary transition-colors">
-                   luxehaven@gmail.com
+              {/* 3. Bottom Contact Section */}
+              <div className="flex-1 flex flex-col justify-start pt-4 gap-1">
+                 <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-semibold mb-2">Get in Touch</p>
+                 <a href="mailto:luxehaven@gmail.com" className="text-lg md:text-xl font-medium text-black hover:text-gray-600 transition-colors">
+                   luxeheavan@gmail.com
                  </a>
-                 <p className="text-sm text-secondary font-light">+91 01234 56789</p>
+                 <p className="text-sm text-gray-500 font-light mt-1">+91 01234 56789</p>
               </div>
            </motion.div>
         </div>
 
-        {/* Bottom Credits */}
+        {/* --- Bottom Credits Footer --- */}
         <div className="absolute bottom-8 w-full text-center z-10">
-           <p className="text-white/60 text-[10px] font-medium uppercase tracking-widest mix-blend-difference">
+           <p className="text-white/70 text-[10px] font-medium uppercase tracking-widest mix-blend-difference">
              © 2024 Luxe Haven Realty. All rights reserved.
            </p>
         </div>

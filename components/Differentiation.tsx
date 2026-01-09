@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AccordionItem } from "../types";
 
-const differentiationImage = "/assets/Stock Images/office-building-1026495.jpg";
 
 const items: AccordionItem[] = [
   {
@@ -46,7 +45,7 @@ const Differentiation: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>("1");
 
   return (
-    <section id="why-haven" className="py-24 my-10 bg-white">
+    <section id="why-haven" className="   mt-10 bg-white">
       <div className="max-w-[90%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
           {/* Left Column */}
@@ -65,19 +64,7 @@ const Differentiation: React.FC = () => {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-              className="mt-8"
-            >
-              <img
-                src={differentiationImage}
-                alt="Curated office interior"
-                className="w-full aspect-[4/3] object-cover rounded-sm"
-              />
-            </motion.div>
+
           </div>
 
           {/* Right Column - Accordion */}
@@ -89,7 +76,7 @@ const Differentiation: React.FC = () => {
                     onClick={() =>
                       setOpenId(openId === item.id ? null : item.id)
                     }
-                    className="w-full flex items-center justify-between py-8 text-left focus:outline-none group"
+                    className="w-full flex items-center justify-between py-4 text-left focus:outline-none group"
                   >
                     <div className="flex items-center gap-8">
                       <span className="text-sm font-semibold text-primary uppercase tracking-wider">

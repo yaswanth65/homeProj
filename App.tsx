@@ -11,7 +11,8 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <main className="w-full overflow-hidden bg-white text-primary selection:bg-gray-200">
+    <main >
+      <div className="w-full overflow-hidden bg-white text-primary selection:bg-gray-200" >
       <Navbar />
       <Hero />
       <Intro />
@@ -19,8 +20,11 @@ const App: React.FC = () => {
       <Manifesto />
       <Differentiation />
       <ImageGrid />
+      </div>
       <Process />
+      <div className="w-full overflow-hidden bg-white text-primary selection:bg-gray-200" >
       <Footer />
+      </div>
     </main>
   );
 };
