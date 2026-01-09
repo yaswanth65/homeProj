@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
              alt="Concrete Architecture" 
              className="w-full h-full object-cover grayscale brightness-110 contrast-125"
            />
-           <div className="absolute inset-0 bg-gray-200/20 mix-blend-multiply"></div>
+           {/* <div className="absolute inset-0 bg-gray-200/20 mix-blend-multiply"></div> */}
         </div>
         
         <div className="relative z-10 w-full px-6">

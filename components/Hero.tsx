@@ -14,7 +14,7 @@ const heroVideo = new URL(
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex flex-col items-center pt-32 bg-[#E6F0F5]">
+    <section className="relative h-[80vh] md:h-screen w-full overflow-hidden flex flex-col items-center pt-32 bg-[#E6F0F5]">
       {/* Background video at base layer */}
       <div className="absolute inset-0 z-0">
         <video
@@ -30,12 +30,12 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Text Overlay */}
-      <div className="relative z-20 text-center px-4 mb-8">
+      <div className="relative z-20 text-center top-20 pt-10   md:top-0 px-4 mb-8">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-normal text-white drop-shadow-sm tracking-tight mb-2"
+          className="text-4xl md:text-7xl lg:text-8xl font-normal text-white drop-shadow-sm tracking-tight mb-2"
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.1)" }}
         >
           Elevating Luxury Living
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-normal text-white drop-shadow-sm tracking-tight mb-6"
+          className="text-4xl md:text-7xl lg:text-8xl font-normal text-white drop-shadow-sm tracking-tight mb-6"
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.1)" }}
         >
           in India
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-          className="text-white/90 font-light text-sm md:text-base tracking-wide max-w-lg mx-auto drop-shadow-md"
+          className="text-white/90 font-light text-base md:text-lg tracking-wide max-w-lg mx-auto drop-shadow-md"
         >
           At Luxe Haven Realty, we go beyond real estate, we create
           extraordinary living experiences.

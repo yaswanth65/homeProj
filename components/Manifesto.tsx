@@ -25,7 +25,7 @@ const Manifesto: React.FC = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <h2 className="text-2xl md:text-5xl lg:text-5xl font-light text-white leading-[1.1] tracking-[-0.08em] drop-shadow-lg">
+          <h2 className="text-3xl md:text-5xl lg:text-5xl font-light text-white leading-[1.1] tracking-[-0.08em] drop-shadow-lg">
             Welcome to our world of creativity, where every project starts with
             a dream and ends with a space that feels like home.
           </h2>
@@ -43,7 +43,7 @@ const Manifesto: React.FC = () => {
                 <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
               </div>
             </div>
-            <div className="absolute bottom-2 left-2 text-[10px] text-white uppercase tracking-wider">
+            <div className="absolute bottom-2 left-2 text-[10px] text-black bg-white/25 backdrop-blur-sm px-1 rounded-md uppercase tracking-wider">
               Take a glimpse
             </div>
           </div>
@@ -53,7 +53,7 @@ const Manifesto: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="text-white/90 font-light text-lg md:text-xl max-w-lg leading-[1.1] tracking-[-0.08em] text-right drop-shadow-md"
+            className="text-white/90 font-light text-base md:text-xl max-w-lg leading-[1.1] tracking-[-0.08em] text-right drop-shadow-md"
           >
             Based in India, we specialize in curating and delivering high-end
             residential and commercial spaces that epitomize sophistication,

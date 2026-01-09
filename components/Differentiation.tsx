@@ -46,7 +46,7 @@ const Differentiation: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>("1");
 
   return (
-    <section id="why-haven" className="py-24 bg-white">
+    <section id="why-haven" className="py-24 my-10 bg-white">
       <div className="max-w-[90%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
           {/* Left Column */}
@@ -57,10 +57,10 @@ const Differentiation: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-xs text-secondary uppercase tracking-[-0.08em] tracking-widest mb-4">
+              <h2 className="text-base text-secondary uppercase tracking-[-0.06em] md:tracking-[-0.08em] tracking-widest mb-4">
                 Why Luxe Haven Realty
               </h2>
-              <p className="text-3xl md:text-4xl tracking-[-0.08em] font-normal text-primary leading-tight mb-12">
+              <p className="text-3xl md:text-4xl tracking-[-0.06em] md:tracking-[-0.08em] font-normal text-primary leading-tight mb-12">
                 what makes us different <br /> (and totally awesome)
               </p>
             </motion.div>

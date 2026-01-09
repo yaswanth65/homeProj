@@ -5,7 +5,7 @@ const gridImage = "/assets/Stock Images/building-6577149.jpg";
 
 const ImageGrid: React.FC = () => {
   return (
-    <section className="w-full bg-white pb-24">
+    <section className="w-full bg-white pb-10 md:pb-24">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
