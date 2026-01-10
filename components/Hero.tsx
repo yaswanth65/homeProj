@@ -132,10 +132,10 @@ const Hero: React.FC = () => {
           className="font-sans font-normal text-white leading-tight drop-shadow-lg"
         >
           {/* Big, beautiful text restored */}
-          <span className="block text-[30px]  opacity-70 lg:text-[4rem] tracking-tight mb-2 md:mb-4">
+          <span className="block text-[30px]  lg:text-[4rem] tracking-tight mb-2 md:mb-4">
             Engineering Spaces That
           </span>
-          <span className="block text-[30px]   opacity-70  lg:text-[4rem] tracking-tight">
+          <span className="block text-[30px]   lg:text-[4rem] tracking-tight">
             Align With Life
           </span>
         </motion.h1>
@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="mt-8 text-white/90 font-light text-sm md:text-lg max-w-[90%] md:max-w-3xl text-center leading-relaxed drop-shadow-md"
+          className="mt-8 text-white/90 font-light text-[13px] md:text-lg max-w-[100%] md:max-w-3xl text-center leading-relaxed drop-shadow-md"
         >
           A legacy-driven real estate and consulting firm blending advanced Vastu science, 
           structural engineering, and modern development to create spaces of balance, value, and longevity.

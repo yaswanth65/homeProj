@@ -32,8 +32,7 @@ const Footer: React.FC = () => {
               {/* 1. Top Text Section */}
               <div className="flex-1 flex items-end pb-4">
                 <h2 className="text-xl md:text-2xl font-light text-black leading-tight mx-auto">
-                  We are always eager to explore new projects and collaboration opportunities. Feel free to reach out, and let's bring visionary designs to life together.
-                </h2>
+                We’re always open to meaningful projects and long-term collaborations. Whether you’re planning, building, or investing let’s create something that stands the test of time.                </h2>
               </div>
 
               {/* 2. Middle Spinning Image Placeholder */}
@@ -65,9 +64,10 @@ const Footer: React.FC = () => {
               <div className="flex-1 flex flex-col justify-start pt-4 gap-1">
                  <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-semibold mb-2">Get in Touch</p>
                  <a href="mailto:luxehaven@gmail.com" className="text-lg md:text-xl font-medium text-black hover:text-gray-600 transition-colors">
-                   luxeheavan@gmail.com
+                 dskrishnaassociates@gmail.com
                  </a>
-                 <p className="text-sm text-gray-500 font-light mt-1">+91 01234 56789</p>
+                 <p className="text-sm text-gray-500 font-light mt-1">+91 79014 44428
+                 </p>
               </div>
            </motion.div>
         </div>
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
         {/* --- Bottom Credits Footer --- */}
         <div className="absolute bottom-8 w-full text-center z-10">
            <p className="text-white/70 text-[10px] bg-black/30 font-medium uppercase tracking-widest mix-blend-difference">
-             © 2026 Luxe Haven Realty. All rights reserved.
+             © 2026 DS Krishna Associates. All rights reserved.
            </p>
         </div>
     </footer>

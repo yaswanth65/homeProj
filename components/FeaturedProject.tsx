@@ -519,8 +519,8 @@ const projects = [
   {
     id: 1,
     image: "/assets/Stock Images/building-4884852.jpg",
-    title: "The Celestia Residences",
-    category: "Residential",
+    title: "Surya Towers – Premium Residential Apartments",
+    category: "Armoor",
     date: "Nov 2020",
   },
   {
@@ -629,7 +629,8 @@ const FeaturedProject: React.FC = () => {
               variants={textPopUp}
               className="text-xs md:text-base font-medium text-gray-500 uppercase tracking-widest block"
             >
-              Featured Projects
+              Our Developments
+
             </motion.span>
           </div>
 
@@ -643,8 +644,8 @@ const FeaturedProject: React.FC = () => {
               variants={textPopUp}
               className="text-xl md:text-4xl tracking-[-0.06em] md:tracking-[-0.08em] font-light text-primary leading-tight"
             >
-              Showcasing our dedication to innovative design and timeless
-              architectural excellence.
+              Built on Experience. Designed for Living.
+              
             </motion.h2>
           </div>
 

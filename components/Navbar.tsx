@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
     <>
       <nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
-        ${scrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md py-2 border-b border-gray-100 top-0' : 'bg-transparent py-0 top-[20px] md:top-[25px]'}`}
+        ${scrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md py-2 border-b border-gray-100 top-0' : 'bg-transparent px-5-0 top-[20px] md:top-[5px]'}`}
       >
         <div className="max-w-[95%] px-2 flex justify-between items-center">
           {/* Logo Section */}
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
                  </motion.div>
               </div>
              <div className={`font-medium text-lg tracking-tight transition-colors ${scrolled || isMenuOpen ? 'text-primary' : 'text-primary/90'}`}>
-               Luxe Haven Realty
+             DS Krishna Associates
              </div>
           </div>
           

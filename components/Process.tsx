@@ -161,29 +161,29 @@ const steps: ProcessStep[] = [
   {
     id: "01",
     number: "01",
-    title: "Initial Consultation",
-    description: "We begin by understanding your vision, goals, and the lifestyle you want the space to reflect.",
+    title: "Assessment & Alignment",
+    description: "Understanding land, purpose, Vastu, and client intent before any plan is drawn. ",
     imageUrl: "/assets/How we Work/Board Meeting.avif",
   },
   {
     id: "02",
     number: "02",
-    title: "Concept Development",
-    description: "Ideas take form through sketches, spatial planning, and early design explorations.",
+    title: "Planning & Compliance ",
+    description: "Technical drawings, approvals, TS bPASS permissions, and regulatory alignment. ",
     imageUrl: "/assets/How we Work/Architecture Sketches.avif",
   },
   {
     id: "03",
     number: "03",
-    title: "Planning & Preparation",
-    description: "From materials and drawings to timelines and budgets, every detail is carefully defined.",
+    title: "Design & Execution",
+    description: "Structural strength, thoughtful layouts, and quality-driven construction.",
     imageUrl: "/assets/How we Work/Architectures.avif",
   },
   {
     id: "04",
     number: "04",
-    title: "Execution & Delivery",
-    description: "We bring the vision to life with precision, quality craftsmanship, and attention to detail.",
+    title: "Delivery & Legacy",
+    description: "Projects built to last—technically, financially, and emotionally.",
     imageUrl: "/assets/How we Work/Modern Architecture.avif",
   },
 ];
@@ -218,8 +218,8 @@ const ParallaxCard = ({ step }: { step: ProcessStep }) => {
       </motion.div>
 
       {/* Overlay Content */}
-      <div className="absolute inset-x-0 bottom-0 p-6">
-        <div className="backdrop-blur-xl bg-black/40 border-t border-white/20 px-6 py-6 rounded-sm text-white">
+      <div className="absolute inset-x-0 bottom-0 p-3">
+        <div className="backdrop-blur-xl bg-black/40 border-t border-white/20 px-3 py-3 rounded-md text-white">
           <div className="flex items-center gap-4 mb-3">
             <span className="text-xs uppercase tracking-widest text-white/70">Step</span>
             <span className="text-4xl font-light">{step.number}</span>
@@ -254,7 +254,7 @@ const Process: React.FC = () => {
             Our Approach
             </span>
             <h2 className="text-xl md:text-3xl leading-[1.15] font-normal tracking-[-0.04em] text-neutral-900">
-            Simplifying Luxury – <br />  Making Your Dream Property a Reality, Effortlessly.
+            Structured. Transparent. Time-Tested.
             </h2>
              
           </div>
@@ -263,7 +263,7 @@ const Process: React.FC = () => {
              - col-span-8: Takes up remaining 8/12 columns
              - flex-col gap-24: Spacing between cards
           */}
-          <div className="lg:col-span-8 flex flex-col gap-12 md:gap-24 pb-24">
+          <div className="lg:col-span-8 flex flex-col gap-6 md:gap-24 pb-24">
             {steps.map((step) => (
               <ParallaxCard   step={step} />
             ))}

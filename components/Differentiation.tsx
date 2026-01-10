@@ -7,37 +7,37 @@ const items: AccordionItem[] = [
   {
     id: "1",
     number: "0001",
-    title: "Exclusivity",
+    title: "Engineering-First Expertise",
     content:
-      "We handpick only the finest properties that meet our high standards of luxury and elegance.",
+      "Backed by 35+ years as licensed technical personnel and structural engineers, every decision is grounded in technical accuracy. ",
   },
   {
     id: "2",
     number: "0002",
-    title: "Integrity",
+    title: "Advanced Vastu Integration",
     content:
-      "Transparency and honesty are at the core of our business. We build trust through clear communication.",
+      "We harmonize ancient Vastu Shastra with modern architecture to optimize energy flow, prosperity, and well-being.",
   },
   {
     id: "3",
     number: "0003",
-    title: "Client Centric",
+    title: "End-to-End Solutions",
     content:
-      "Your vision is our blueprint. We tailor every aspect of our service to meet your specific needs.",
+      "From planning and permissions to valuations and development—everything under one accountable roof. ",
   },
   {
     id: "4",
     number: "0004",
-    title: "Innovation",
+    title: "Institutional Credibility",
     content:
-      "Embracing modern technology and sustainable practices to create homes for the future.",
+      "Approved valuers for national banks and the Income Tax Department, ensuring unmatched reliability and compliance. ",
   },
   {
     id: "5",
     number: "0005",
-    title: "Excellence",
+    title: "Customer-Centric Development",
     content:
-      "We settle for nothing less than perfection in craftsmanship, design, and delivery.",
+      "We don’t just build projects—we build trust, transparency, and long-term relationships. ",
   },
 ];
 
@@ -57,10 +57,11 @@ const Differentiation: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-xs text-secondary uppercase tracking-[-0.06em] md:tracking-[-0.08em] tracking-widest mb-4">
-                Why Luxe Haven Realty
+              Why D S Krishna
+
               </h2>
               <p className="text-xl md:text-4xl tracking-[-0.06em] md:tracking-[-0.08em] font-normal text-primary leading-tight mb-12">
-                what makes us different <br /> (and totally awesome)
+              Decades of Trust. Designed for the Future.
               </p>
             </motion.div>
 

@@ -20,8 +20,9 @@ const Intro: React.FC = () => {
               {...slideUp}
               className="text-base md:text-lg leading-relaxed font-normal tracking-[-0.06em] md:tracking-[-0.08em] text-primary max-w-xs"
             >
-              Founded in 2012, Luxe Haven Realty embodies forward-thinking and
-              inspiring architectural design headquartered in India.
+              Founded in 1985, D S Krishna Associates represents a new chapter in purposeful construction and real estate development, 
+              rooted in trust, technical mastery, and customer satisfaction.
+
             </motion.p>
           </div>
 
@@ -31,11 +32,11 @@ const Intro: React.FC = () => {
               {...slideUp}
               className="text-xl md:text-3xl lg:text-4xl tracking-[-0.06em] md:tracking-[-0.08em] text-primary mb-12"
             >
-              Luxe Haven Realty specializes in modern architecture and real
-              estate development that seamlessly integrates functionality,
-              aesthetics, and sustainability. The studio brings a unique global
-              perspective to every project. With a commitment to crafting
-              timeless designs.
+              With over 35 years of experience in building planning, structural engineering,
+               permissions, valuations, and Vastu consulting, the firm seamlessly integrates functionality, 
+               sustainability, and energy harmony. Every project reflects a deep understanding of land, structure, 
+               and human well-being designed to stand strong both technically and energetically.
+
             </motion.p>
 
             <motion.p
@@ -43,8 +44,8 @@ const Intro: React.FC = () => {
               transition={{ ...slideUp.transition, delay: 0.1 }}
               className="text-base md:text-2xl font-normal tracking-[-0.06em] md:tracking-[-0.08em] text-primary mb-12"
             >
-              Co-founded by Indian-born visionary Pradhyumn Dhondi and creative
-              architect Thyfreelanceguy
+              D S Krishna Associates is led by Er. Ganesh Dhondi, a veteran structural engineer, and Er. D Sai Krishna, 
+              an B-School Grad–trained Management consultant brings together generational wisdom and modern strategic thinking.
             </motion.p>
 
             <motion.button
