@@ -132,10 +132,10 @@ const Hero: React.FC = () => {
           className="font-sans font-normal text-white leading-tight drop-shadow-lg"
         >
           {/* Big, beautiful text restored */}
-          <span className="block text-7xl  opacity-70 lg:text-[4rem] tracking-tight mb-2 md:mb-4">
+          <span className="block text-6xl  opacity-70 lg:text-[4rem] tracking-tight mb-2 md:mb-4">
             Engineering Spaces That
           </span>
-          <span className="block text-7xl   opacity-70  lg:text-[4rem] tracking-tight">
+          <span className="block text-6xl   opacity-70  lg:text-[4rem] tracking-tight">
             Align With Life
           </span>
         </motion.h1>
