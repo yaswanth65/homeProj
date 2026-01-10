@@ -11,7 +11,7 @@ const Intro: React.FC = () => {
   };
 
   return (
-    <section id="about" className="bg-white">
+    <section id="about" className="bg-white py-16 md:py-24 ">
       <div className="max-w-[90%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
           {/* Left Column: History */}
@@ -29,7 +29,7 @@ const Intro: React.FC = () => {
           <div className="lg:col-span-8">
             <motion.p
               {...slideUp}
-              className="text-3xl md:text-3xl lg:text-4xl tracking-[-0.06em] md:tracking-[-0.08em] text-primary mb-12"
+              className="text-xl md:text-3xl lg:text-4xl tracking-[-0.06em] md:tracking-[-0.08em] text-primary mb-12"
             >
               Luxe Haven Realty specializes in modern architecture and real
               estate development that seamlessly integrates functionality,
@@ -41,7 +41,7 @@ const Intro: React.FC = () => {
             <motion.p
               {...slideUp}
               transition={{ ...slideUp.transition, delay: 0.1 }}
-              className="text-xl md:text-2xl font-normal tracking-[-0.06em] md:tracking-[-0.08em] text-primary mb-12"
+              className="text-base md:text-2xl font-normal tracking-[-0.06em] md:tracking-[-0.08em] text-primary mb-12"
             >
               Co-founded by Indian-born visionary Pradhyumn Dhondi and creative
               architect Thyfreelanceguy

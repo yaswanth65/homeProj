@@ -206,7 +206,7 @@ const ParallaxCard = ({ step }: { step: ProcessStep }) => {
     <motion.div
       ref={ref}
       style={{ opacity }}
-      className="relative w-full md:w-[80%] lg:ml-auto aspect-[4/5] lg:aspect-[3/2] rounded-2xl overflow-hidden shadow-lg"
+      className="relative w-full md:w-[80%] lg:ml-auto aspect-[4/5] lg:aspect-[3/2] rounded-md overflow-hidden shadow-lg"
     >
       {/* Parallax Image Wrapper */}
       <motion.div style={{ y }} className="absolute inset-0 w-full h-[120%] -top-[10%]">
@@ -219,7 +219,7 @@ const ParallaxCard = ({ step }: { step: ProcessStep }) => {
 
       {/* Overlay Content */}
       <div className="absolute inset-x-0 bottom-0 p-6">
-        <div className="backdrop-blur-xl bg-black/40 border-t border-white/20 px-6 py-6 rounded-xl text-white">
+        <div className="backdrop-blur-xl bg-black/40 border-t border-white/20 px-6 py-6 rounded-sm text-white">
           <div className="flex items-center gap-4 mb-3">
             <span className="text-xs uppercase tracking-widest text-white/70">Step</span>
             <span className="text-4xl font-light">{step.number}</span>
@@ -241,7 +241,7 @@ const Process: React.FC = () => {
         {/* Using CSS GRID instead of Flexbox is often more robust for Sticky layouts.
           It ensures the left and right columns explicitly share the container height.
         */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
           {/* LEFT COLUMN - STICKY 
              - sticky: Enables stickiness
@@ -253,7 +253,7 @@ const Process: React.FC = () => {
             <span className="block text-sm font-medium tracking-[0.08em] uppercase text-neutral-500 mb-4">
             Our Approach
             </span>
-            <h2 className="text-2xl md:text-3xl leading-[1.15] font-normal tracking-[-0.04em] text-neutral-900">
+            <h2 className="text-xl md:text-3xl leading-[1.15] font-normal tracking-[-0.04em] text-neutral-900">
             Simplifying Luxury – <br />  Making Your Dream Property a Reality, Effortlessly.
             </h2>
              
@@ -263,7 +263,7 @@ const Process: React.FC = () => {
              - col-span-8: Takes up remaining 8/12 columns
              - flex-col gap-24: Spacing between cards
           */}
-          <div className="lg:col-span-8 flex flex-col gap-32 pb-24">
+          <div className="lg:col-span-8 flex flex-col gap-12 md:gap-24 pb-24">
             {steps.map((step) => (
               <ParallaxCard   step={step} />
             ))}

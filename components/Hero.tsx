@@ -132,10 +132,10 @@ const Hero: React.FC = () => {
           className="font-sans font-normal text-white leading-tight drop-shadow-lg"
         >
           {/* Big, beautiful text restored */}
-          <span className="block text-6xl  opacity-70 lg:text-[4rem] tracking-tight mb-2 md:mb-4">
+          <span className="block text-[30px]  opacity-70 lg:text-[4rem] tracking-tight mb-2 md:mb-4">
             Engineering Spaces That
           </span>
-          <span className="block text-6xl   opacity-70  lg:text-[4rem] tracking-tight">
+          <span className="block text-[30px]   opacity-70  lg:text-[4rem] tracking-tight">
             Align With Life
           </span>
         </motion.h1>
@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="mt-8 text-white/90 font-light text-lg md:text-lg max-w-[90%] md:max-w-3xl text-center leading-relaxed drop-shadow-md"
+          className="mt-8 text-white/90 font-light text-sm md:text-lg max-w-[90%] md:max-w-3xl text-center leading-relaxed drop-shadow-md"
         >
           A legacy-driven real estate and consulting firm blending advanced Vastu science, 
           structural engineering, and modern development to create spaces of balance, value, and longevity.
@@ -156,7 +156,7 @@ const Hero: React.FC = () => {
          Since container is 130vh, this starts further down, leaving the top clear.
          As you scroll, this element rises naturally with the page.
       */}
-      <div className="absolute bottom-0 z-20 w-full flex justify-center items-end">
+      <div className="absolute bottom-20 md:bottom-0 z-20 w-full flex justify-center items-end">
         <motion.img
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ const Hero: React.FC = () => {
           src={heroBuilding}
           alt="Luxury Architecture"
           // CHANGE 3: max-h set to ensure it looks dominant but doesn't overflow the 130vh container inappropriately
-          className="w-full min-w-[90vh] h-auto max-h-[75vh] md:max-h-[100vh] object-cover object-bottom"
+          className="w-full min-w-[90vh] h-auto max-h-[90vh] md:max-h-[100vh] object-cover object-bottom"
         />
       </div>
 

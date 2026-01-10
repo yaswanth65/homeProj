@@ -6,7 +6,7 @@ const differentiationImage = "/assets/Stock Images/office-building-1026495.jpg";
 
 const ImageGrid: React.FC = () => {
   return (
-    <section className="w-full bg-white pb-10 md:pb-24 pt-12">
+    <section className="w-full bg-white mb-24 pb-10 md:pb-24 pt-12">
       <div className="max-w-[90%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
           

@@ -3,16 +3,17 @@ import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const rotating = "/assets/Stock Images/rotating-image.png"
+  const footer = "/assets/Stock Images/building-1727807.jpg"
   return (
     // Outer container - Ensures full viewport height and centers content
-    <footer className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#e0e0e0]">
+    <footer className="relative mt-16 w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#e0e0e0]">
         
         {/* --- Background Image --- */}
         <div className="absolute inset-0 z-0">
            <img 
              // You can swap this background image URL as needed
-             src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2600&auto=format&fit=crop" 
-             alt="Architecture Background" 
+             src={footer}
+              alt="Architecture Background" 
              // object-cover ensures it fills the space, making it feel "big"
              className="w-full h-[130vh] object-cover grayscale brightness-110 contrast-125"
            />
@@ -73,8 +74,8 @@ const Footer: React.FC = () => {
 
         {/* --- Bottom Credits Footer --- */}
         <div className="absolute bottom-8 w-full text-center z-10">
-           <p className="text-white/70 text-[10px] font-medium uppercase tracking-widest mix-blend-difference">
-             © 2024 Luxe Haven Realty. All rights reserved.
+           <p className="text-white/70 text-[10px] bg-black/30 font-medium uppercase tracking-widest mix-blend-difference">
+             © 2026 Luxe Haven Realty. All rights reserved.
            </p>
         </div>
     </footer>
