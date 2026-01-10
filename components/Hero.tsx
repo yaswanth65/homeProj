@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
       <motion.div 
         style={{ y: textY, opacity: textOpacity }}
         // CHANGE 2: Restored padding and size because we now have room in the 130vh container
-        className="relative z-10 top-0 w-full text-center pt-32 md:pt-16 px-4 flex flex-col items-center fixed-text-layer"
+        className="relative z-10 top-20 md:top-0 w-full text-center pt-32 md:pt-16 px-4 flex flex-col items-center fixed-text-layer"
       >
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -132,10 +132,10 @@ const Hero: React.FC = () => {
           className="font-sans font-normal text-white leading-tight drop-shadow-lg"
         >
           {/* Big, beautiful text restored */}
-          <span className="block text-5xl  opacity-60 lg:text-[4rem] tracking-tight mb-2 md:mb-4">
+          <span className="block text-7xl  opacity-70 lg:text-[4rem] tracking-tight mb-2 md:mb-4">
             Engineering Spaces That
           </span>
-          <span className="block text-5xl   opacity-60  lg:text-[4rem] tracking-tight">
+          <span className="block text-7xl   opacity-70  lg:text-[4rem] tracking-tight">
             Align With Life
           </span>
         </motion.h1>
@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="mt-8 text-white/90 font-light text-base md:text-lg max-w-[90%] md:max-w-3xl text-center leading-relaxed drop-shadow-md"
+          className="mt-8 text-white/90 font-light text-lg md:text-lg max-w-[90%] md:max-w-3xl text-center leading-relaxed drop-shadow-md"
         >
           A legacy-driven real estate and consulting firm blending advanced Vastu science, 
           structural engineering, and modern development to create spaces of balance, value, and longevity.
@@ -164,12 +164,12 @@ const Hero: React.FC = () => {
           src={heroBuilding}
           alt="Luxury Architecture"
           // CHANGE 3: max-h set to ensure it looks dominant but doesn't overflow the 130vh container inappropriately
-          className="w-full h-auto max-h-[75vh] md:max-h-[100vh] object-cover object-bottom"
+          className="w-full min-w-[90vh] h-auto max-h-[75vh] md:max-h-[100vh] object-cover object-bottom"
         />
       </div>
 
       {/* --- LAYER 4: White Fade Gradient (Z-30) --- */}
-      <div className="absolute inset-x-0 bottom-0 h-32 md:h-64 bg-gradient-to-t from-white via-white/90 to-transparent z-30 pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-64 md:h-64 bg-gradient-to-t from-white via-white/90 to-transparent z-30 pointer-events-none" />
 
     </section>
   );

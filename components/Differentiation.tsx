@@ -82,7 +82,7 @@ const Differentiation: React.FC = () => {
                       <span className="text-sm font-semibold text-primary uppercase tracking-wider">
                         {item.number}
                       </span>
-                      <span className="text-xl md:text-2xl font-normal text-primary group-hover:text-gray-600 transition-colors">
+                      <span className="text-xl md:text-2xl font-normal text-primary group-hover:text-blue-600 transition-colors">
                         {item.title}
                       </span>
                     </div>

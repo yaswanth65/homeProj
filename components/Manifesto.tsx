@@ -118,7 +118,7 @@ const Manifesto: React.FC = () => {
         </motion.div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row items-end justify-between mt-auto gap-8 md:gap-12 pb-12">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between mt-auto gap-8 md:gap-12 pb-12">
           
           {/* Bottom Left: Inset Card */}
           <motion.div 
@@ -127,7 +127,7 @@ const Manifesto: React.FC = () => {
             style={{ y: yDesc }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex items-center bg-white/20 bg-blur-sm rounded-md gap-4 w-full md:w-auto"
+            className="flex items-center bg-white/20 bg-blur-sm rounded-md gap-4 w-25 md:w-full md:w-auto"
           >
             <div className="w-32 h-20 md:w-48 md:h-28 rounded-xl overflow-hidden border border-white/30 shadow-2xl relative group cursor-pointer">
               <img
@@ -136,7 +136,7 @@ const Manifesto: React.FC = () => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
-            <p className="text-white/80 text-xs md:text-sm max-w-[150px] leading-tight font-medium">
+            <p className="text-white/80 text-xs md:text-sm   max-w-[150px] leading-tight font-medium">
               Take a glimpse into our world of creativity and innovation.
             </p>
           </motion.div>

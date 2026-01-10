@@ -14,12 +14,12 @@ const Footer: React.FC = () => {
              src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2600&auto=format&fit=crop" 
              alt="Architecture Background" 
              // object-cover ensures it fills the space, making it feel "big"
-             className="w-full h-full object-cover grayscale brightness-110 contrast-125"
+             className="w-full h-[130vh] object-cover grayscale brightness-110 contrast-125"
            />
         </div>
         
         {/* --- Central Card Container --- */}
-        <div className="relative z-10 w-full px-6 flex justify-center items-center my-12">
+        <div className="relative z-10 w-full px-6 flex justify-center items-center my-24">
            <motion.div 
              initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}

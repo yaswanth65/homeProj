@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const rotating = "/assets/Stock Images/rotating_image-logo.png"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,16 +35,34 @@ const Navbar: React.FC = () => {
     <>
       <nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
-        ${scrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md py-4 border-b border-gray-100 top-0' : 'bg-transparent py-6 top-[20px] md:top-[25px]'}`}
+        ${scrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md py-2 border-b border-gray-100 top-0' : 'bg-transparent py-0 top-[20px] md:top-[25px]'}`}
       >
-        <div className="max-w-[95%] mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-[95%] px-2 flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center gap-2 relative z-50">
-             <div className="w-6 h-6 bg-primary text-white flex items-center justify-center rounded-sm">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-             </div>
+          <div className="flex-1 flex items-center justify-center ">
+                 <motion.div 
+                    animate={{ rotate: 360 }}
+                    transition={{ 
+                      repeat: Infinity, 
+                      duration: 12, // Adjust rotation speed here (higher number = slower)
+                      ease: "linear" 
+                    }}
+                    // Set the size of your icon container here (e.g., w-24 h-24)
+                    className="w-16 h-16 relative flex items-center justify-center"
+                 >
+                    {/* ----------- IMAGE PLACEHOLDER ----------- 
+                       Replace the 'src' below with your actual image path.
+                       e.g., src="/assets/images/my-icon.png"
+                    */}
+                    <img 
+                        src={rotating} 
+                        alt="Spinning Icon"
+                        // object-contain ensures your image doesn't get cropped
+                        className=" object-contain"
+                    />
+                 </motion.div>
+              </div>
              <div className={`font-medium text-lg tracking-tight transition-colors ${scrolled || isMenuOpen ? 'text-primary' : 'text-primary/90'}`}>
                Luxe Haven Realty
              </div>
