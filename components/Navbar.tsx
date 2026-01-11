@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,11 +25,12 @@ const Navbar: React.FC = () => {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { name: 'Our Work', href: '#featured' },
-    { name: 'Why Haven', href: '#why-haven' },
-    { name: 'About', href: '#about' },
-    { name: 'Process', href: '#process' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: 'Our Work', href: '/#featured' },
+    { name: 'Why Haven', href: '/#why-haven' },
+    { name: 'About', href: '/#about' },
+    { name: 'Process', href: '/#process' },
+    { name: 'Contact Us', href: '/#contact' },
+    
   ];
 
   return (
@@ -71,10 +73,12 @@ const Navbar: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8 text-xs font-medium tracking-widest uppercase text-primary">
             {navLinks.map((link) => (
+              
               <a key={link.name} href={link.href} className="hover:text-secondary transition-colors">
                 {link.name}
               </a>
             ))}
+            <Link to='/company' className="hover:text-secondary transition-colors" > Company </Link>
           </div>
           
           {/* Mobile Menu Button (Hamburger / X) */}
